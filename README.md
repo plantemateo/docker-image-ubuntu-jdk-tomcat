@@ -6,7 +6,7 @@ Una vez clonado este repositorio deberá:
 - Finalmente, crear la imagen:
 
 ```
-docker build -t jdk21 .
+docker build -t plantemateo/ubuntu24.04-jdk:21 .
 ```
 
 **Crear imágenes de Apache Tomcat**
