@@ -22,17 +22,17 @@ El script se basa en la imagen: *plantemateo/ubuntu24.04-jdk:21* respectivamente
 
 Básico:
 ```
-docker run -it -p 8080:8080 --name tomcat plantemateo/tomcat:10.1.34
+docker run -it -p 8080:8080 --name tomcat plantemateo/tomcat-jdk21:10.1.34
 ```
 
 Externalizando tus propias aplicaciones:
 ```
-docker run -it -p 8080:8080 --name tomcat -v /path/a/tu/webapps:/opt/tomcat/webapps plantemateo/tomcat:10.1.34
+docker run -it -p 8080:8080 --name tomcat -v /path/a/tu/webapps:/opt/tomcat/webapps plantemateo/tomcat-jdk21:10.1.34
 ```
 
 Estableciendo valores de configuración customizados (*setenv.sh*):
 ```
-docker run -it -p 8080:8080 --name tomcat /path/a/tu//setenv.sh:/opt/tomcat/bin/setenv.sh -v /path/a/tu/webapps:/opt/tomcat/webapps plantemateo/tomcat:10.1.34
+docker run -it -p 8080:8080 --name tomcat /path/a/tu//setenv.sh:/opt/tomcat/bin/setenv.sh -v /path/a/tu/webapps:/opt/tomcat/webapps plantemateo/tomcat-jdk21:10.1.34
 ```
 ---
 
