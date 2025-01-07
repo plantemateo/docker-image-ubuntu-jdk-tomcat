@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "START SETENV!!!!"
+export CATALINA_OPTS="$CATALINA_OPTS -Xmx2048m"
+export CATALINA_OPTS="$CATALINA_OPTS -Xms1024m"
