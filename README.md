@@ -1,8 +1,8 @@
-# Dockerfiles para crear imágenes de JDK y Apache Tomcat
+# Dockerfiles para crear imágenes de Ubuntu con Java JDK y Apache Tomcat
 
-**Crear Imagenes de Java**
+**Crear Imagenes de Ubuntu con Java**
 Una vez clonado este repositorio deberá:
-- Descargar la versión del JDK de Oracle y asegurate que poseá este nombre: *jdk-linux-x64.tar.gz* en la carpeta *jdk* [aquí](https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html).
+- Descargar la versión del JDK de Oracle y asegurate que poseá este nombre: *jdk-linux-x64.tar.gz* en la carpeta *jdk* [aquí](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html).
 - Finalmente, crear la imagen:
 
 ```
@@ -12,6 +12,8 @@ docker build -t plantemateo/ubuntu24.04-jdk:21 .
 docker build -t plantemateo/ubuntu24.04-jdk:11 .
 ```
 
+Ver script ```jdk/build.sh``` para crear y subir la imagen directamente a Docker Hub.
+
 **Crear imágenes de Apache Tomcat**
 
 Para ello existen dos scipts:
@@ -20,7 +22,8 @@ Para ello existen dos scipts:
 
 El script 21 se basa en la imagen: *plantemateo/ubuntu24.04-jdk:21* respectivamente
 El script 11 se basa en la imagen: *plantemateo/ubuntu24.04-jdk:11* respectivamente
-> El script anterior posee variables de entorno que pueden ser modificadas a fin de crear imágenes de sub versiones específicas de tomcat 10, estas variables son: *VERSION_P* y *VERSION_S*
+
+> El script anterior posee variables de entorno que pueden ser modificadas a fin de crear imágenes de sub versiones específicas de tomcat 9 y 10, estas variables son: *VERSION_P* y *VERSION_S*
 
 **Crear contenedores**
 
