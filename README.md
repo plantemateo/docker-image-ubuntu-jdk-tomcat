@@ -8,15 +8,19 @@ Una vez clonado este repositorio deberá:
 ```
 docker build -t plantemateo/ubuntu24.04-jdk:21 .
 ```
+```
+docker build -t plantemateo/ubuntu24.04-jdk:11 .
+```
 
 **Crear imágenes de Apache Tomcat**
 
-Para ello existe un solo scipt:
+Para ello existen dos scipts:
 - ```tomcat/build21.sh```
+- ```tomcat/build11.sh```
 
-El script se basa en la imagen: *plantemateo/ubuntu24.04-jdk:21* respectivamente
+El script 21 se basa en la imagen: *plantemateo/ubuntu24.04-jdk:21* respectivamente
+El script 11 se basa en la imagen: *plantemateo/ubuntu24.04-jdk:11* respectivamente
 > El script anterior posee variables de entorno que pueden ser modificadas a fin de crear imágenes de sub versiones específicas de tomcat 10, estas variables son: *VERSION_P* y *VERSION_S*
-
 
 **Crear contenedores**
 
@@ -24,15 +28,24 @@ Básico:
 ```
 docker run -it -p 8080:8080 --name tomcat plantemateo/tomcat-jdk21:10.1.34
 ```
+```
+docker run -it -p 8080:8080 --name tomcat plantemateo/tomcat-jdk11:9.0.100
+```
 
 Externalizando tus propias aplicaciones:
 ```
 docker run -it -p 8080:8080 --name tomcat -v /path/a/tu/webapps:/opt/tomcat/webapps plantemateo/tomcat-jdk21:10.1.34
 ```
+```
+docker run -it -p 8080:8080 --name tomcat -v /path/a/tu/webapps:/opt/tomcat/webapps plantemateo/tomcat-jdk11:9.0.100
+```
 
 Estableciendo valores de configuración customizados (*setenv.sh*):
 ```
 docker run -it -p 8080:8080 --name tomcat /path/a/tu//setenv.sh:/opt/tomcat/bin/setenv.sh -v /path/a/tu/webapps:/opt/tomcat/webapps plantemateo/tomcat-jdk21:10.1.34
+```
+```
+docker run -it -p 8080:8080 --name tomcat /path/a/tu//setenv.sh:/opt/tomcat/bin/setenv.sh -v /path/a/tu/webapps:/opt/tomcat/webapps plantemateo/tomcat-jdk11:9.0.100
 ```
 ---
 
