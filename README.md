@@ -22,6 +22,7 @@ Para ello existen dos scipts:
 - ```tomcat/build11.sh```
 
 El script 21 se basa en la imagen: *plantemateo/ubuntu24.04-jdk:21* respectivamente
+
 El script 11 se basa en la imagen: *plantemateo/ubuntu24.04-jdk:11* respectivamente
 
 > El script anterior posee variables de entorno que pueden ser modificadas a fin de crear imágenes de sub versiones específicas de tomcat 9 y 10, estas variables son: *VERSION_P* y *VERSION_S*
