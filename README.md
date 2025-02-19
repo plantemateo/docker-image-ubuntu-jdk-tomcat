@@ -1,6 +1,7 @@
-# Dockerfiles para crear imágenes de Ubuntu con Java JDK y Apache Tomcat
+# Dockerfiles para crear imágenes de Ubuntu con Java y Apache Tomcat
 
 **Crear Imagenes de Ubuntu con Java**
+
 Una vez clonado este repositorio deberá:
 - Descargar la versión del JDK de Oracle y asegurate que poseá este nombre: *jdk-linux-x64.tar.gz* en la carpeta *jdk* [aquí](https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html).
 - Finalmente, crear la imagen:
