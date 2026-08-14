@@ -11,10 +11,11 @@ docker build -t plantemateo/ubuntu24.04-jdk:21 .
 
 **Crear imágenes de Apache Tomcat**
 
-Para ello existe un solo scipt:
+Para ello existen dos scripts:
 - ```tomcat/build21.sh```
+- ```tomcat/build25.sh```
 
-El script se basa en la imagen: *plantemateo/ubuntu24.04-jdk:21* respectivamente
+El script build21.sh se basa en la imagen: *plantemateo/ubuntu24.04-jdk:21* respectivamente
 > El script anterior posee variables de entorno que pueden ser modificadas a fin de crear imágenes de sub versiones específicas de tomcat 10, estas variables son: *VERSION_P* y *VERSION_S*
 
 
@@ -39,5 +40,6 @@ docker run -it -p 8080:8080 --name tomcat /path/a/tu//setenv.sh:/opt/tomcat/bin/
 **Licencia**
 
 Creado por Plante Mateo en 2025
+Last Update 14/08/2026
 
 Licensed under the Apache License, Version 2.0
